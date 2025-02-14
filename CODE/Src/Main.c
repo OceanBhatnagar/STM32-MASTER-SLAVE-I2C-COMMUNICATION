@@ -78,6 +78,7 @@ int main(void){
 
 	while(1){
     //Button Press
+		 while(GPIO_INPUT_PINREAD(GPIOC,13)==1);
 	//I2C DATA TRANSFER
 	I2C_Master_DataSend(&I2C1Handle,data,strlen((char*)data),SlaveAddr);
 	}
